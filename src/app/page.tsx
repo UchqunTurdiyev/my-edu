@@ -2,7 +2,7 @@
 import styles from './page.module.css';
 import Heading from './../component/heading/heading';
 import Text from './../component/text/text';
-import { Button, Tag } from '@/component';
+import { Button, Input, Tag, TextArea } from '@/component';
 import { useState } from 'react';
 
 export default function Home() {
@@ -24,6 +24,15 @@ export default function Home() {
 			<Button appearace='primary' arrow={isClick ? 'down' : 'right'} onClick={() => setIsClick(prev => !prev)}>
 				Arrow
 			</Button>
+
+			<br />
+
+			<Input placeholder='Enter Name' />
+			<br />
+			<hr />
+			<div>
+				<TextArea placeholder='Message' />
+			</div>
 		</>
 	);
 }
