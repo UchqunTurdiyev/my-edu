@@ -5,3 +5,4 @@ export { default as Button } from './button/button';
 export { default as Input } from './input/input';
 export { default as TextArea } from './text-area/text-area';
 export { default as Raiting } from './raiting/raiting';
+export { default as Card } from './card/card';

@@ -2,7 +2,7 @@
 import styles from './page.module.css';
 import Heading from './../component/heading/heading';
 import Text from './../component/text/text';
-import { Button, Input, Tag, TextArea, Raiting } from '@/component';
+import { Button, Input, Tag, TextArea, Raiting, Card } from '@/component';
 import { useState } from 'react';
 
 export default function Home(): JSX.Element {
@@ -36,6 +36,12 @@ export default function Home(): JSX.Element {
 			</div>
 			<br />
 			<Raiting raiting={raiting} isEditabled={true} setRaiting={setRaiting} />
+
+			<Card color='white'>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt aliquam amet labore ducimus doloribus dolores iusto magni.
+				Assumenda, nisi doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam recusandae mollitia nisi,
+				atque sunt.
+			</Card>
 		</>
 	);
 }
