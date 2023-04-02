@@ -13,17 +13,37 @@ const Raiting = ({ raiting, isEditabled = false, setRaiting, ...props }: Raiting
 	}, [raiting]);
 
 	const renderRaiting = (currantRaiting: number) => {
-		const updateArray = raitingArray.map((raiting: JSX.Element, idx: number) => (
+		const updateArray = raitingArray.map((r: JSX.Element, idx: number) => (
 			<span
 				key={idx}
 				className={cn(styles.star, {
 					[styles.filled]: idx < currantRaiting,
+					[styles.editable]: isEditabled,
 				})}
+				onMouseEnter={() => changeRaitingDisplay(idx + 1)}
+				onMouseLeave={() => changeRaitingDisplay(raiting)}
+				onClick={() => clickRaitingStar(idx + 1)}
 			>
 				<AiFillStar />
 			</span>
 		));
 		setRaitingArray(updateArray);
+	};
+
+	const changeRaitingDisplay = (index: number) => {
+		if (!isEditabled) {
+			return;
+		} else {
+			renderRaiting(index);
+		}
+	};
+
+	const clickRaitingStar = (index: number) => {
+		if (!isEditabled || !setRaiting) {
+			return;
+		} else {
+			setRaiting(index);
+		}
 	};
 
 	return (

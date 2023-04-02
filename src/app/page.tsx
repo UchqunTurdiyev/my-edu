@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 export default function Home(): JSX.Element {
 	const [isClick, setIsClick] = useState(false);
+	const [raiting, setRaiting] = useState<number>(4);
 	return (
 		<>
 			<Heading tag='h1'>Heading</Heading>
@@ -34,7 +35,7 @@ export default function Home(): JSX.Element {
 				<TextArea placeholder='Message' />
 			</div>
 			<br />
-			<Raiting raiting={3} />
+			<Raiting raiting={raiting} isEditabled={true} setRaiting={setRaiting} />
 		</>
 	);
 }
