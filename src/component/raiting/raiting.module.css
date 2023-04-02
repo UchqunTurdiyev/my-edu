@@ -1,0 +1,9 @@
+.filled {
+	color: var(--primary);
+}
+.raiting {
+	color: var(--gray);
+}
+.star {
+	margin-right: 4px;
+}

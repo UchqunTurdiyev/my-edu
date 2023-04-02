@@ -2,10 +2,10 @@
 import styles from './page.module.css';
 import Heading from './../component/heading/heading';
 import Text from './../component/text/text';
-import { Button, Input, Tag, TextArea } from '@/component';
+import { Button, Input, Tag, TextArea, Raiting } from '@/component';
 import { useState } from 'react';
 
-export default function Home() {
+export default function Home(): JSX.Element {
 	const [isClick, setIsClick] = useState(false);
 	return (
 		<>
@@ -33,6 +33,8 @@ export default function Home() {
 			<div>
 				<TextArea placeholder='Message' />
 			</div>
+			<br />
+			<Raiting raiting={3} />
 		</>
 	);
 }

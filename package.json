@@ -22,6 +22,8 @@
     "typescript": "5.0.3"
   },
   "devDependencies": {
-    "@svgr/webpack": "^7.0.0"
+    "@svgr/webpack": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0"
   }
 }
