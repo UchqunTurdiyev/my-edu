@@ -4,12 +4,13 @@ import Heading from './../component/heading/heading';
 import Text from './../component/text/text';
 import { Button, Input, Tag, TextArea, Raiting, Card } from '@/component';
 import { useState } from 'react';
+import Layout from './../layout/layout';
 
 export default function Home(): JSX.Element {
 	const [isClick, setIsClick] = useState(false);
 	const [raiting, setRaiting] = useState<number>(4);
 	return (
-		<>
+		<Layout>
 			<Heading tag='h1'>Heading</Heading>
 			<Text size='l'>Text</Text>
 			<Tag size='s' color='red'>
@@ -42,6 +43,6 @@ export default function Home(): JSX.Element {
 				Assumenda, nisi doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam recusandae mollitia nisi,
 				atque sunt.
 			</Card>
-		</>
+		</Layout>
 	);
 }
